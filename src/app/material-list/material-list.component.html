@@ -1,0 +1,16 @@
+<table class="table table-hover table-striped table-bordered">
+    <thead>
+        <th>Name</th>
+        <th>Action</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of materials">
+            <td>{{item.name}}</td>
+            
+            <td>
+                <input type="button" value="Update" class="btn btn-primary" (click)="edit(item.id)" >
+                <input type="button" value="Delete" class="btn btn-danger ms-3 " (click)="delete(item.id)" >
+            </td>
+        </tr>
+    </tbody>
+</table>

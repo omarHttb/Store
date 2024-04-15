@@ -1,0 +1,13 @@
+<form [formGroup]="materialForm">
+<div class=" ms-3 d-flex align-items-center mt-3" style="height: 12vh;">
+<div class="mb-3 col-2">
+  <label class="form-label">Material Name</label>
+  <input type="text" formControlName="txtName" class="form-control" >
+  <span *ngIf="materialForm.controls['txtName'].touched && materialForm.hasError('required','txtName')"></span>
+</div>
+</div>
+<div class="ms-3">
+  <input type="button" class="btn btn-primary " value="save" *ngIf="isEdit==false" style="width: 70px;" (click)="onSave()">
+  <input type="button" class="btn btn-primary " value="update" *ngIf="isEdit==true" style="width: 70px;" (click)="update()">
+</div>
+</form>
